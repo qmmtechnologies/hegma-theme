@@ -1,12 +1,9 @@
 import clsx from "clsx";
 import React from "react";
 
-import { Logo } from "../icons/Logo";
-import { LogoDark } from "../icons/LogoDark";
 import { localStorageKeys } from "../localStorageKeys";
 import { makeStyles, useTheme } from "../theme";
 import useLocalStorage from "../tools/useLocalStorage";
-import { ExpandButton } from "./ExpandButton";
 import { MenuItem, menuWidth, shrunkMenuWidth } from "./MenuItem";
 import { BaseSidebarProps } from "./types";
 
@@ -29,7 +26,7 @@ const useStyles = makeStyles(
     },
     root: {
       transition: "width 0.5s ease",
-      width: menuWidth
+      width: menuWidth,
     },
     rootShrink: {
       width: shrunkMenuWidth,
@@ -56,12 +53,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   linkComponent,
 }) => {
   const classes = useStyles({});
-  const { value: isShrunkStr, setValue: setShrink } = useLocalStorage(
-    localStorageKeys.menuShrink,
-    false.toString()
-  );
-  const isShrunk = isShrunkStr === "true";
-  const { themeType } = useTheme();
+  
 
   const Link = linkComponent ?? "a";
 
@@ -72,6 +64,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
       })}
     >
       <div className={classes.float}>
+        <Link href={logoHref} className={classes.logo}>
+          
+        </Link>
         {menuItems.map((menuItem) =>
           linkComponent ? (
             <MenuItem
@@ -92,6 +87,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           )
         )}
         {toolbar && <div className={classes.toolbarContainer}>{toolbar}</div>}
+        
       </div>
     </div>
   );
