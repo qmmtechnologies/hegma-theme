@@ -34,10 +34,10 @@ export const dark: SaleorThemeColors = {
 
   active: {
     1: "#F3630F",
-    2: "#F3630F",
-    3: "#F3630F",
-    4: "#F3630F",
-    5: "#F3630F",
+    2: "#ff833a",
+    3: "#ffa570",
+    4: "#f4b28c",
+    5: "#ffc8a8",
   },
   main: {
     1: "#FAFAFA",
@@ -116,10 +116,10 @@ export const light: SaleorThemeColors = {
 
   active: {
     1: "#F3630F",
-    2: "#F3630F",
-    3: "#F3630F",
-    4: "#F3630F",
-    5: "#F3630F",
+    2: "#ff833a",
+    3: "#ffa570",
+    4: "#f4b28c",
+    5: "#ffc8a8",
   },
   main: {
     1: "#28234A",
