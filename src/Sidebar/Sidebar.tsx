@@ -1,9 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 
-import { localStorageKeys } from "../localStorageKeys";
-import { makeStyles, useTheme } from "../theme";
-import useLocalStorage from "../tools/useLocalStorage";
+import { makeStyles } from "../theme";
 import { MenuItem, menuWidth, shrunkMenuWidth } from "./MenuItem";
 import { BaseSidebarProps } from "./types";
 
@@ -60,7 +58,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   return (
     <div
       className={clsx(classes.root, {
-        [classes.rootShrink]: isShrunk,
+        [classes.rootShrink]: false,
       })}
     >
       <div className={classes.float}>
@@ -71,7 +69,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           linkComponent ? (
             <MenuItem
               activeId={activeId}
-              isMenuShrunk={isShrunk}
+              isMenuShrunk={false}
               menuItem={menuItem}
               key={menuItem.ariaLabel}
               linkComponent={linkComponent}
@@ -79,7 +77,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           ) : (
             <MenuItem
               activeId={activeId}
-              isMenuShrunk={isShrunk}
+              isMenuShrunk={false}
               menuItem={menuItem}
               onClick={onMenuItemClick}
               key={menuItem.ariaLabel}
