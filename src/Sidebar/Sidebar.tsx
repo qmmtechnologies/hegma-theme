@@ -29,7 +29,7 @@ const useStyles = makeStyles(
     },
     root: {
       transition: "width 0.5s ease",
-      width: menuWidth,
+      width: menuWidth
     },
     rootShrink: {
       width: shrunkMenuWidth,
@@ -72,9 +72,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
       })}
     >
       <div className={classes.float}>
-        <Link href={logoHref} className={classes.logo}>
-          {themeType === "dark" ? <LogoDark /> : <Logo />}
-        </Link>
         {menuItems.map((menuItem) =>
           linkComponent ? (
             <MenuItem
@@ -95,11 +92,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
           )
         )}
         {toolbar && <div className={classes.toolbarContainer}>{toolbar}</div>}
-        <ExpandButton
-          className={classes.expandButton}
-          isShrunk={isShrunk}
-          onClick={() => setShrink((!isShrunk).toString())}
-        />
       </div>
     </div>
   );

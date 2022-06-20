@@ -100,7 +100,7 @@ const useStyles = makeStyles(
       color: fade(theme.palette.text.primary, 0.6),
       cursor: "pointer",
       display: "flex",
-      height: 100,
+      height: 56,
       marginBottom: theme.spacing(),
       overflow: "hidden",
       padding: theme.spacing(2, 3, 2, 3),
