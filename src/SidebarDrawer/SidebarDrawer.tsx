@@ -72,7 +72,7 @@ export const SidebarDrawer: React.FC<SideBarDrawerProps> = ({
           >
             <div className={classes.content}>
               <Link href={logoHref} className={classes.logo}>
-                {themeType === "dark" ? <LogoDark /> : <Logo />}
+                
               </Link>
               {menuItems.map((menuItem) => (
                 <MenuItemBtn
