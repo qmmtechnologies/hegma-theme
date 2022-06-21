@@ -6,11 +6,8 @@ import clsx from "clsx";
 import React from "react";
 import SVG from "react-inlinesvg";
 
-import { Logo } from "../icons/Logo";
-import { LogoDark } from "../icons/LogoDark";
 import { BaseSidebarProps, SidebarMenuItem } from "../Sidebar/types";
 import { SquareButton } from "../SquareButton";
-import { useTheme } from "../theme";
 import { MenuItemBtn } from "./MenuItemBtn";
 import useStyles from "./styles";
 
@@ -29,7 +26,7 @@ export const SidebarDrawer: React.FC<SideBarDrawerProps> = ({
   );
   const [showSubmenu, setShowSubmenu] = React.useState(false);
   const container = React.useRef<HTMLDivElement>(null);
-  const { themeType } = useTheme();
+
 
   const handleMenuItemClick = (menuItem: SidebarMenuItem) => {
     setOpened(false);
