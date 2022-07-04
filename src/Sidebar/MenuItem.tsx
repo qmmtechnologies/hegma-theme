@@ -97,7 +97,7 @@ const useStyles = makeStyles(
       },
       borderBottomRightRadius: 4,
       borderTopRightRadius: 4,
-      color: fade(theme.palette.text.primary, 0.6),
+      color:"white",
       cursor: "pointer",
       display: "flex",
       height: 56,
