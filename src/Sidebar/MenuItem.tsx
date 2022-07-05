@@ -97,7 +97,7 @@ const useStyles = makeStyles(
       },
       borderBottomRightRadius: 4,
       borderTopRightRadius: 4,
-      color:"white",
+      color:"rgba(40, 35, 74, 0.6)",
       cursor: "pointer",
       display: "flex",
       height: 56,
@@ -106,18 +106,23 @@ const useStyles = makeStyles(
       padding: theme.spacing(2, 3, 2, 3),
       transition: theme.transitions.duration.shortest + "ms",
       width: shrunkMenuWidth,
+      borderBottom: '1px solid rgb(40 35 74 / 15%)'
     },
     rootActive: {
       "&$root": {
         "&:hover, &:focus-visible, &$rootOpen": {
           color: theme.palette.primary.main,
         },
-        background: theme.palette.background.paper,
-        color: theme.palette.text.primary,
+        color: 'rgba(40, 35, 74, 0.6)',
+        background: '#FFFFFF',
+        borderTop: '1px solid rgb(40 35 74 / 15%)',
+        borderBottom: '1px solid rgb(40 35 74 / 15%)'
+    
+    
       },
     },
     rootExpanded: {
-      width: menuWidth,
+      width: "240px",
     },
     rootOpen: {},
     subMenuHeader: {

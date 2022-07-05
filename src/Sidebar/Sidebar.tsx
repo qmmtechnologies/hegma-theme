@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React from "react";
 
 import { makeStyles } from "../theme";
-import { MenuItem, menuWidth, shrunkMenuWidth } from "./MenuItem";
+import { MenuItem, shrunkMenuWidth } from "./MenuItem";
 import { BaseSidebarProps } from "./types";
 
 const useStyles = makeStyles(
@@ -12,19 +12,19 @@ const useStyles = makeStyles(
     },
     float: {
       height: "100vh",
-      position: "fixed",
+     
       overflowY: "auto",
       overflowX: "hidden",
       paddingBottom: theme.spacing(3),
     },
     logo: {
       display: "block",
-      margin: `36px 0 ${theme.spacing(3)} ${theme.spacing(2.5)}`,
+      margin: `1px 0 ${theme.spacing(3)} ${theme.spacing(2.5)}`,
       color: "inherit",
     },
     root: {
       transition: "width 0.5s ease",
-      width: menuWidth,
+      width: "237px",
     },
     rootShrink: {
       width: shrunkMenuWidth,
